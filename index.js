@@ -1,34 +1,18 @@
-function log(msg){
-    console.log(msg);
-}
-log("mi fantastico log");
 
-var numbers = [1,2,3];
+var express = require("express");
+var cool = require("cool-ascii-faces");
 
-numbers.forEach(log);
+var app = express();
+var port = process.env.PORT || 12345
 
-numbers.forEach(function log(msg){
-    console.log("v2:"+msg);
+app.get("/faces", (request,response) =>{
+    response.send(cool());
+    console.log("new request");
 });
 
-numbers.forEach(function (msg){
-    console.log("v3:"+msg);
+
+app.listen(port,()=>{
+    console.log(`Server ready in port ${port}`);
 });
 
-numbers.forEach((msg) => {
-    console.log("v4:"+msg);
-});
-
-var i = numbers
-            .filter((n)=>{
-                return n > 2;
-            }).forEach(log);
-    
-numbers
-    .filter((n)=>{
-        return n > 2;
-   }).map((n)=>{
-        return n +1;
-   }).reduce((a,n) =>{
-    return n +a ;
-   });
+ 
