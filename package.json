@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gti-sos/SOS2223-16-sandbox/issues"
   },
-  "homepage": "https://github.com/gti-sos/SOS2223-16-sandbox#readme"
+  "homepage": "https://github.com/gti-sos/SOS2223-16-sandbox#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
